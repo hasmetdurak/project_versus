@@ -1,0 +1,11 @@
+# Handle client-side routing
+/*    /index.html   200
+
+# API routes
+/api/*  /api/:splat  200
+
+# Language routes
+/tr/*   /tr/:splat   200
+/de/*   /de/:splat   200
+/fr/*   /fr/:splat   200
+/es/*   /es/:splat   200
