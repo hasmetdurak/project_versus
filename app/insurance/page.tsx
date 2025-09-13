@@ -4,100 +4,106 @@ import { ComparisonTable } from "@/components/comparison-table"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { CheckCircle, Star, Shield, Globe, TrendingUp } from "lucide-react"
+import { CheckCircle, Star, Shield, Globe, TrendingUp, Plane, Home, Car, Heart, Briefcase } from "lucide-react"
 
-const creditCardProducts = [
+const insuranceProducts = [
   {
-    id: "chase-sapphire",
-    name: "Chase Sapphire Preferred",
-    price: "$95",
-    rating: 4.8,
-    features: {
-      "Annual Fee": "$95",
-      "Rewards Rate": "2x points on travel/dining, 1x on other purchases",
-      "Sign-up Bonus": "60,000 points after $4,000 spend",
-      "Benefits": "Trip cancellation insurance, Primary rental car insurance",
-      "Best For": "Frequent travelers"
-    },
-    pros: ["Excellent travel benefits", "Strong rewards program", "Good customer service"],
-    cons: ["Annual fee", "Foreign transaction fees on some purchases"],
-    affiliateUrl: "https://chase.com/sapphire?ref=globalcompare"
-  },
-  {
-    id: "capital-one-venture",
-    name: "Capital One Venture Rewards",
-    price: "$95",
+    id: "safetywing",
+    name: "SafetyWing",
+    price: "$42/month",
     rating: 4.6,
     features: {
-      "Annual Fee": "$95",
-      "Rewards Rate": "2x miles on all purchases",
-      "Sign-up Bonus": "75,000 miles after $4,000 spend",
-      "Benefits": "No foreign transaction fees, Travel credits",
-      "Best For": "General travel rewards"
+      "Coverage Type": "Global travel coverage",
+      "Claims Process": "Simple online claims",
+      "Support": "24/7 support",
+      "Best For": "Digital nomads",
+      "Coverage Limit": "$250,000",
+      "Deductible": "$250"
     },
-    pros: ["No foreign transaction fees", "Simple rewards structure", "Good travel benefits"],
-    cons: ["Annual fee", "Limited transfer partners"],
-    affiliateUrl: "https://capitalone.com/venture?ref=globalcompare"
+    pros: ["Affordable for long-term travel", "Covers digital nomads", "Easy online application"],
+    cons: ["Limited coverage for pre-existing conditions", "Not available in all countries"],
+    affiliateUrl: "https://safetywing.com/?ref=globalcompare"
   },
   {
-    id: "amex-gold",
-    name: "American Express Gold Card",
-    price: "$250",
-    rating: 4.7,
+    id: "world-nomads",
+    name: "World Nomads",
+    price: "$89/month",
+    rating: 4.8,
     features: {
-      "Annual Fee": "$250",
-      "Rewards Rate": "4x points at restaurants, 4x at US supermarkets",
-      "Sign-up Bonus": "60,000 points after $4,000 spend",
-      "Benefits": "$120 dining credit, $100 airline fee credit",
-      "Best For": "Foodies and frequent diners"
+      "Coverage Type": "Comprehensive travel coverage",
+      "Claims Process": "Fast claims processing",
+      "Support": "Excellent support",
+      "Best For": "Frequent travelers",
+      "Coverage Limit": "$500,000",
+      "Deductible": "$100"
     },
-    pros: ["High rewards on dining", "Excellent benefits", "Premium perks"],
-    cons: ["High annual fee", "Limited acceptance internationally"],
-    affiliateUrl: "https://americanexpress.com/gold?ref=globalcompare"
+    pros: ["Comprehensive coverage", "Covers adventure activities", "Excellent customer service"],
+    cons: ["More expensive", "Complex policy terms"],
+    affiliateUrl: "https://worldnomads.com/?ref=globalcompare"
   },
   {
-    id: "citi-double-cash",
-    name: "Citi Double Cash Card",
-    price: "$0",
+    id: "allianz-travel",
+    name: "Allianz Travel",
+    price: "$67/month",
     rating: 4.5,
     features: {
-      "Annual Fee": "$0",
-      "Rewards Rate": "2% cashback on all purchases",
-      "Sign-up Bonus": "$200 after $1,500 spend",
-      "Benefits": "No foreign transaction fees",
-      "Best For": "Simple cashback seekers"
+      "Coverage Type": "Worldwide coverage",
+      "Claims Process": "Efficient claims",
+      "Support": "Reliable support",
+      "Best For": "Business travelers",
+      "Coverage Limit": "$1,000,000",
+      "Deductible": "$150"
     },
-    pros: ["No annual fee", "Simple 2% cashback", "No category restrictions"],
-    cons: ["No sign-up bonus", "Limited additional benefits"],
-    affiliateUrl: "https://citi.com/doublecash?ref=globalcompare"
+    pros: ["High coverage limits", "Good for business travel", "Established brand"],
+    cons: ["Higher premiums", "Strict policy conditions"],
+    affiliateUrl: "https://allianztravel.com/?ref=globalcompare"
   },
   {
-    id: "discover-it",
-    name: "Discover it Cash Back",
-    price: "$0",
+    id: "axa",
+    name: "AXA",
+    price: "$54/month",
+    rating: 4.3,
+    features: {
+      "Coverage Type": "European travel coverage",
+      "Claims Process": "Streamlined process",
+      "Support": "Good support",
+      "Best For": "European travelers",
+      "Coverage Limit": "$300,000",
+      "Deductible": "$200"
+    },
+    pros: ["Strong European presence", "Good value for money", "Reliable coverage"],
+    cons: ["Limited global coverage", "Language barriers in some regions"],
+    affiliateUrl: "https://axa-travel.com/?ref=globalcompare"
+  },
+  {
+    id: "img-global",
+    name: "IMG Global",
+    price: "$76/month",
     rating: 4.4,
     features: {
-      "Annual Fee": "$0",
-      "Rewards Rate": "5% cashback in rotating categories, 1% on everything else",
-      "Sign-up Bonus": "Cashback match for first year",
-      "Benefits": "No annual fee, Cashback match",
-      "Best For": "Budget-conscious users"
+      "Coverage Type": "US-focused coverage",
+      "Claims Process": "Comprehensive claims",
+      "Support": "24/7 assistance",
+      "Best For": "US residents traveling abroad",
+      "Coverage Limit": "$2,000,000",
+      "Deductible": "$100"
     },
-    pros: ["No annual fee", "Cashback match", "Good customer service"],
-    cons: ["Rotating categories require activation", "Limited acceptance"],
-    affiliateUrl: "https://discover.com/cashback?ref=globalcompare"
+    pros: ["Very high coverage limits", "US-based support", "Comprehensive benefits"],
+    cons: ["More expensive", "Complex application process"],
+    affiliateUrl: "https://imglobal.com/?ref=globalcompare"
   }
 ]
 
-const creditCardFeatures = [
-  "Annual Fee",
-  "Rewards Rate", 
-  "Sign-up Bonus",
-  "Benefits",
-  "Best For"
+const insuranceFeatures = [
+  "Coverage Type",
+  "Claims Process",
+  "Support",
+  "Best For",
+  "Coverage Limit",
+  "Deductible"
 ]
 
-export default function CreditCardsPage() {
+export default function InsurancePage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
@@ -107,10 +113,10 @@ export default function CreditCardsPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Credit Cards: Find Your Perfect Financial Partner
+                Insurance: Protect What Matters Most
               </h1>
               <p className="text-xl text-gray-600 mb-8">
-                Choosing the right credit card can save you hundreds of dollars annually through rewards, cashback, and travel benefits.
+                Insurance is your financial safety net against unexpected events. Whether it's travel mishaps, health emergencies, or property damage, having the right coverage can save you from significant financial loss.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Badge variant="secondary" className="text-sm py-2 px-4">
@@ -119,7 +125,7 @@ export default function CreditCardsPage() {
                 </Badge>
                 <Badge variant="secondary" className="text-sm py-2 px-4">
                   <Shield className="w-4 h-4 mr-2" />
-                  Secure Comparisons
+                  Comprehensive Coverage
                 </Badge>
                 <Badge variant="secondary" className="text-sm py-2 px-4">
                   <TrendingUp className="w-4 h-4 mr-2" />
@@ -130,70 +136,72 @@ export default function CreditCardsPage() {
           </div>
         </section>
 
-        {/* Why Credit Card Selection Matters */}
+        {/* Insurance Types */}
         <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-                Why Credit Card Selection Matters
+                Key Insurance Types to Consider
               </h2>
-              <p className="text-lg text-gray-600 mb-8 text-center">
-                With so many options available, understanding your needs and comparing features is crucial.
-              </p>
               
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <Card>
                   <CardHeader>
                     <CardTitle className="flex items-center">
-                      🏆 <span className="ml-2">Rewards Structure</span>
+                      <Plane className="w-6 h-6 text-blue-500 mr-3" />
+                      Travel Insurance
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-gray-600">Cashback, points, miles - choose what works best for your spending habits.</p>
+                    <p className="text-gray-600">For trips, including medical coverage and trip cancellation</p>
                   </CardContent>
                 </Card>
                 
                 <Card>
                   <CardHeader>
                     <CardTitle className="flex items-center">
-                      💰 <span className="ml-2">Annual Fees vs Benefits</span>
+                      <Home className="w-6 h-6 text-green-500 mr-3" />
+                      Homeowners/Renters Insurance
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-gray-600">Calculate if the benefits outweigh the annual fee costs.</p>
+                    <p className="text-gray-600">Protects your property and belongings</p>
                   </CardContent>
                 </Card>
                 
                 <Card>
                   <CardHeader>
                     <CardTitle className="flex items-center">
-                      🔒 <span className="ml-2">Security Features</span>
+                      <Car className="w-6 h-6 text-red-500 mr-3" />
+                      Auto Insurance
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-gray-600">Fraud protection, EMV chip technology, and security alerts.</p>
+                    <p className="text-gray-600">Covers vehicle damage and liability</p>
                   </CardContent>
                 </Card>
                 
                 <Card>
                   <CardHeader>
                     <CardTitle className="flex items-center">
-                      🌍 <span className="ml-2">International Usage</span>
+                      <Heart className="w-6 h-6 text-pink-500 mr-3" />
+                      Health Insurance
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-gray-600">Foreign transaction fees matter for frequent travelers.</p>
+                    <p className="text-gray-600">Medical coverage for you and your family</p>
                   </CardContent>
                 </Card>
                 
                 <Card>
                   <CardHeader>
                     <CardTitle className="flex items-center">
-                      📈 <span className="ml-2">Credit Requirements</span>
+                      <Briefcase className="w-6 h-6 text-purple-500 mr-3" />
+                      Business Insurance
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-gray-600">Know your credit score requirements before applying.</p>
+                    <p className="text-gray-600">Protects your business assets and operations</p>
                   </CardContent>
                 </Card>
               </div>
@@ -205,24 +213,24 @@ export default function CreditCardsPage() {
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-              Top 5 Credit Cards Compared (2025)
+              Top 5 Insurance Providers Compared (2025)
             </h2>
             <ComparisonTable
-              products={creditCardProducts}
-              features={creditCardFeatures}
-              category="Credit Cards"
-              title="Best Credit Cards 2025"
-              description="Compare top credit cards by rewards, fees, and benefits. Find the perfect card for your spending habits and financial goals."
+              products={insuranceProducts}
+              features={insuranceFeatures}
+              category="Insurance"
+              title="Best Insurance Providers 2025"
+              description="Compare top insurance providers by coverage, claims process, and customer support. Find the perfect protection for your needs."
             />
           </div>
         </section>
 
-        {/* How to Maximize Benefits */}
+        {/* How to Choose */}
         <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-                How to Maximize Your Credit Card Benefits
+                How to Choose the Right Insurance Policy
               </h2>
               
               <div className="space-y-6">
@@ -230,11 +238,11 @@ export default function CreditCardsPage() {
                   <CardHeader>
                     <CardTitle className="flex items-center">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                      Use the right card for the right purchase
+                      Assess Your Specific Needs
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-gray-600">Match your spending habits with the best rewards category</p>
+                    <p className="text-gray-600">Consider your travel destinations, health status, and assets</p>
                   </CardContent>
                 </Card>
                 
@@ -242,11 +250,11 @@ export default function CreditCardsPage() {
                   <CardHeader>
                     <CardTitle className="flex items-center">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                      Pay your balance in full each month
+                      Compare Coverage Limits
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-gray-600">Avoid interest charges to maximize your rewards value</p>
+                    <p className="text-gray-600">Ensure they meet your requirements</p>
                   </CardContent>
                 </Card>
                 
@@ -254,11 +262,11 @@ export default function CreditCardsPage() {
                   <CardHeader>
                     <CardTitle className="flex items-center">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                      Leverage sign-up bonuses
+                      Check Exclusions
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-gray-600">Meet minimum spend requirements to earn valuable bonuses</p>
+                    <p className="text-gray-600">Understand what's not covered</p>
                   </CardContent>
                 </Card>
                 
@@ -266,11 +274,11 @@ export default function CreditCardsPage() {
                   <CardHeader>
                     <CardTitle className="flex items-center">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                      Monitor your credit score
+                      Evaluate Claims Process
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-gray-600">Qualify for premium cards with better benefits</p>
+                    <p className="text-gray-600">How easy is it to file and get paid?</p>
                   </CardContent>
                 </Card>
                 
@@ -278,11 +286,11 @@ export default function CreditCardsPage() {
                   <CardHeader>
                     <CardTitle className="flex items-center">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                      Set up automatic payments
+                      Read Customer Reviews
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-gray-600">Avoid missed payments and late fees</p>
+                    <p className="text-gray-600">Look for real experiences with claims handling</p>
                   </CardContent>
                 </Card>
               </div>
@@ -292,7 +300,7 @@ export default function CreditCardsPage() {
                   💡 Pro Tip
                 </h3>
                 <p className="text-blue-800">
-                  Always check if your card offers purchase protection for items you buy – this can save you thousands in replacement costs.
+                  Always read the fine print – some policies exclude pre-existing conditions or high-risk activities.
                 </p>
               </div>
             </div>

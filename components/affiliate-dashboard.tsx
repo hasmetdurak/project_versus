@@ -22,8 +22,8 @@ const mockAffiliateLinks: AffiliateLink[] = [
     clickCount: 1250,
     conversionCount: 89,
     revenue: 2847.5,
-    createdAt: new Date("2024-01-01"),
-    updatedAt: new Date("2024-01-15"),
+    createdAt: new Date("2025-01-01"),
+    updatedAt: new Date("2025-01-15"),
   },
   {
     id: "2",
@@ -36,8 +36,8 @@ const mockAffiliateLinks: AffiliateLink[] = [
     clickCount: 980,
     conversionCount: 67,
     revenue: 2010.0,
-    createdAt: new Date("2024-01-01"),
-    updatedAt: new Date("2024-01-15"),
+    createdAt: new Date("2025-01-01"),
+    updatedAt: new Date("2025-01-15"),
   },
   {
     id: "3",
@@ -50,8 +50,8 @@ const mockAffiliateLinks: AffiliateLink[] = [
     clickCount: 456,
     conversionCount: 23,
     revenue: 3450.0,
-    createdAt: new Date("2024-01-01"),
-    updatedAt: new Date("2024-01-15"),
+    createdAt: new Date("2025-01-01"),
+    updatedAt: new Date("2025-01-15"),
   },
 ]
 

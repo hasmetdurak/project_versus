@@ -35,11 +35,10 @@ export interface BlogCategory {
 export const mockBlogPosts: BlogPost[] = [
   {
     id: "1",
-    slug: "best-vpn-2024-complete-guide",
-    title: "Best VPN Services in 2024: Complete Buyer's Guide",
-    excerpt:
-      "Discover the top VPN services of 2024 with our comprehensive comparison. Security, speed, and value analyzed.",
-    content: `# Best VPN Services in 2024: Complete Buyer's Guide
+    slug: "best-vpn-2025-complete-guide",
+    title: "Best VPN Services in 2025: Complete Buyer's Guide",
+    excerpt: "Discover the top VPN services of 2025 with our comprehensive comparison. Security, speed, and value analyzed.",
+    content: `# Best VPN Services in 2025: Complete Buyer's Guide
 
 In today's digital landscape, choosing the right VPN service is crucial for your online privacy and security. After extensive testing and analysis, we've compiled this comprehensive guide to help you make an informed decision.
 
@@ -104,15 +103,17 @@ Remember to always test any VPN service with their money-back guarantee to ensur
       bio: "Cybersecurity expert with 8+ years of experience in VPN and privacy technologies.",
     },
     category: "VPN",
-    tags: ["VPN", "Privacy", "Security", "2024"],
-    featuredImage: "/blog/vpn-guide-2024.jpg",
-    publishedAt: new Date("2024-01-15"),
-    updatedAt: new Date("2024-01-15"),
+    tags: ["VPN", "Privacy", "Security", "2025"],
+    featuredImage: "/blog/vpn-guide-2025.jpg",
+    publishedAt: new Date("2025-01-15"),
+    updatedAt: new Date("2025-01-15"),
+    seoTitle: "Best VPN Services 2025 - Complete Buyer's Guide & Reviews",
+    seoDescription: "Find the best VPN service in 2025. Compare top providers, features, pricing, and security. Expert reviews and recommendations.",
     readingTime: 8,
     isPublished: true,
-    seoTitle: "Best VPN Services 2024 - Complete Buyer's Guide & Reviews",
+    seoTitle: "Best VPN Services 2025 - Complete Buyer's Guide & Reviews",
     seoDescription:
-      "Find the best VPN service in 2024. Compare top providers, features, pricing, and security. Expert reviews and recommendations.",
+      "Find the best VPN service in 2025. Compare top providers, features, pricing, and security. Expert reviews and recommendations.",
     language: "en",
     relatedProducts: ["expressvpn", "nordvpn", "surfshark"],
   },
@@ -200,7 +201,7 @@ Remember: The best reward is the one you can earn without going into debt.`,
     updatedAt: new Date("2024-01-10"),
     readingTime: 12,
     isPublished: true,
-    seoTitle: "Maximize Credit Card Rewards: Expert Tips & Strategies 2024",
+    seoTitle: "Maximize Credit Card Rewards: Expert Tips & Strategies 2025",
     seoDescription:
       "Learn how to maximize credit card rewards with expert strategies. Earn more points, miles, and cashback on everyday purchases.",
     language: "en",
